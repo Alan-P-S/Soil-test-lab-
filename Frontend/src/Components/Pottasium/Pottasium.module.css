@@ -1,0 +1,17 @@
+.container{
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding-inline: 10px;
+    width: 340px;
+    background-color: rgb(6, 255, 130);
+}
+
+
+.values{
+    color: white;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
