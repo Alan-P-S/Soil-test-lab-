@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import {axiosInstance} from '../lib/axios.js'
 
     export const useStore = create((set) => ({
       dataFromChild: null, // Initial state for the data

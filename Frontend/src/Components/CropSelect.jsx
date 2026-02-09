@@ -25,7 +25,7 @@ function CropSelect({ CropCall }) {
   };
   useEffect(() => {
     console.log(selectedCrop);
-    CropCall(selectedCrop);
+    CropCall(selectedCrop); 
   }, [selectedCrop]);
   return (
     <>
