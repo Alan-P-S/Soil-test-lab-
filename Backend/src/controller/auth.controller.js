@@ -1,5 +1,6 @@
 import { raw } from 'express';
 import User from '../models/user.model.js';
+import Plot from '../models/plot.model.js';
 export const signup = async(req,res)=>{
     try{
         const data = req.body;
@@ -21,5 +22,16 @@ export const allusers = async(req,res)=>{
     }catch(err){
         console.log(err);
         return res.status(401).json({message:err.message});
+    }
+}
+
+export const userByPhone = async (req,res)=>{
+    const {phone} = req.body;
+    try{
+        const data = await User.findOne({ where: { phone: phone },include:[{model:Plot}] });
+        return res.status(201).json(data);
+    }catch(error){
+        console.log(error);
+        return res.status(401).json(error);
     }
 }

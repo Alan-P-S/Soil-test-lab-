@@ -7,11 +7,12 @@ import BookTest from "../models/bookTest.model.js";
 import TestResult from "../models/testResult.model.js";
 
 export const associate = ()=>{
-    User.hasMany(Test);
-    User.hasMany(Plot);
+    User.hasMany(Test,{foreignKey:{allowNull:false}});
+    User.hasMany(Plot,{foreignKey:{allowNull:false}});
     User.hasMany(FarmerCrop);
     FarmerCrop.belongsTo(GeneralCrop);
     User.hasMany(BookTest);
     Plot.hasOne(BookTest);
+    Test.belongsTo(Plot,{foreignKey:{allowNull:false}});
     User.hasMany(TestResult);    
 }

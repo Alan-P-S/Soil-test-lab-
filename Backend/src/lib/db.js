@@ -1,6 +1,6 @@
 import {Sequelize} from 'sequelize';
 
-export const sequelize = new Sequelize('test','root','root',{host:'localhost',dialect:'mysql'});
+export const sequelize = new Sequelize('soiltest','root','root',{host:'localhost',dialect:'mysql'});
 
 
 export const connectDB = async ()=>{

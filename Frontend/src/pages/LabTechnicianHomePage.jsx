@@ -1,5 +1,10 @@
 import { useNavigate } from "react-router-dom";
-import { UserPlus, CalendarPlus, FileEdit } from "lucide-react";
+import {
+  UserPlus,
+  CalendarPlus,
+  FileEdit,
+  TestTube, // NEW ICON
+} from "lucide-react";
 
 export default function LabTechnicianHome() {
   const navigate = useNavigate();
@@ -17,7 +22,8 @@ export default function LabTechnicianHome() {
 
       {/* Main */}
       <main className="flex-1 p-6 flex items-center justify-center">
-        <div className="max-w-4xl w-full">
+        <div className="max-w-5xl w-full">
+
           {/* Welcome */}
           <div className="mb-10 text-center">
             <h1 className="text-2xl font-bold text-base-content">
@@ -29,7 +35,8 @@ export default function LabTechnicianHome() {
           </div>
 
           {/* Action Cards */}
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+
             {/* Register Farmer */}
             <div
               onClick={() => navigate("/lab/register-farmer")}
@@ -39,9 +46,11 @@ export default function LabTechnicianHome() {
                 <UserPlus size={40} className="opacity-80" />
                 <h2 className="card-title">Register Farmer</h2>
                 <p className="text-sm text-base-content/70">
-                  Add a new farmer to the system for soil testing
+                  Add a new farmer to the system
                 </p>
-                <button className="btn btn-primary btn-sm mt-4">Proceed</button>
+                <button className="btn btn-primary btn-sm mt-4">
+                  Proceed
+                </button>
               </div>
             </div>
 
@@ -54,9 +63,28 @@ export default function LabTechnicianHome() {
                 <CalendarPlus size={40} className="opacity-80" />
                 <h2 className="card-title">Add New Event</h2>
                 <p className="text-sm text-base-content/70">
-                  Create soil collection camps or testing events
+                  Create soil camps or awareness events
                 </p>
-                <button className="btn btn-primary btn-sm mt-4">Proceed</button>
+                <button className="btn btn-primary btn-sm mt-4">
+                  Proceed
+                </button>
+              </div>
+            </div>
+
+            {/* Add Soil Test (NEW) */}
+            <div
+              onClick={() => navigate("/lab/add-soiltest")}
+              className="card bg-base-100 border border-base-300 shadow-sm hover:shadow-md cursor-pointer transition"
+            >
+              <div className="card-body items-center text-center">
+                <TestTube size={40} className="opacity-80" />
+                <h2 className="card-title">Add Soil Test</h2>
+                <p className="text-sm text-base-content/70">
+                  Create a new soil test sample entry
+                </p>
+                <button className="btn btn-primary btn-sm mt-4">
+                  Proceed
+                </button>
               </div>
             </div>
 
@@ -69,11 +97,14 @@ export default function LabTechnicianHome() {
                 <FileEdit size={40} className="opacity-80" />
                 <h2 className="card-title">Update Test Result</h2>
                 <p className="text-sm text-base-content/70">
-                  Enter or modify soil test results for samples
+                  Enter or modify soil test results
                 </p>
-                <button className="btn btn-primary btn-sm mt-4">Proceed</button>
+                <button className="btn btn-primary btn-sm mt-4">
+                  Proceed
+                </button>
               </div>
             </div>
+
           </div>
         </div>
       </main>

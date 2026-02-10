@@ -13,16 +13,16 @@ const User = sequelize.define('User',{
         type:DataTypes.STRING,
         allowNull:false
     },
-    password:{
-        type:DataTypes.STRING,
-        allowNull:false,
-    },
     place:{
+        type:DataTypes.STRING,
+        allowNull:false
+    },
+    landArea:{
         type:DataTypes.STRING,
         allowNull:false
     }
     },
-    {tableName:'usertable',});
+);
 
 
 export default User;
