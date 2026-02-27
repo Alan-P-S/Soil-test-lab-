@@ -13,6 +13,7 @@ export const associate = ()=>{
     FarmerCrop.belongsTo(GeneralCrop);
     User.hasMany(BookTest);
     Plot.hasOne(BookTest);
+    Test.belongsTo(User);
     Test.belongsTo(Plot,{foreignKey:{allowNull:false}});
     User.hasMany(TestResult);    
 }

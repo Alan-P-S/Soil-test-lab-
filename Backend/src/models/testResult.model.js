@@ -24,7 +24,7 @@ const TestResult = sequelize.define('TestResult',{
     },
     ClassValue:{
         type:DataTypes.INTEGER,
-        allowNull:false
+        allowNull:true
     },
     status:{
         type:DataTypes.STRING,

@@ -4,4 +4,5 @@ const router = new express.Router();
 
 router.get('/alltests',alltests);
 router.post('/add',updateTest);
+
 export default router;
